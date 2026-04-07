@@ -1,0 +1,130 @@
+body {
+  background: #A7C6DA;
+  color: #2f3061;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  color: #0E34A0;
+  margin-top: 30px;
+}
+
+#options {
+  margin: 20px auto;
+  padding: 15px;
+  background: #5F5980;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+#options input[type="text"] {
+  padding: 8px;
+  border: 1px solid #343434;
+  border-radius: 5px;
+  margin-right: 8px;
+  background: #fff;
+  color: #2f3061;
+}
+
+#options button {
+  background: #0E34A0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 14px;
+  margin: 0 3px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+#options button:hover {
+  background: #343434;
+}
+
+#optionList {
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  width: 350px;
+  box-shadow: 0 2px 8px rgba(47,48,97,0.08);
+}
+
+#optionList h2 {
+  color: #5F5980;
+}
+
+#optionsDisplay li {
+  list-style: none;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#optionsDisplay input[type="text"] {
+  border: 1px solid #A7C6DA;
+  border-radius: 5px;
+  padding: 5px;
+  width: 180px;
+  margin-right: 10px;
+  color: #2f3061;
+}
+
+#optionsDisplay button {
+  background: #A7C6DA;
+  color: #2f3061;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#optionsDisplay button:hover {
+  background: #343434;
+  color: #fff;
+}
+
+#wheel {
+  margin: 30px auto;
+}
+
+#spinnerCanvas {
+  background: #fff;
+  border: 4px solid #0E34A0;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(47,48,97,0.12);
+}
+
+#result {
+  margin: 20px auto;
+  font-size: 1.3em;
+  color: #0E34A0;
+  font-weight: bold;
+}
+
+#back {
+  margin-top: 20px;
+}
+
+button[onclick="spinWheel()"] {
+  background: #5F5980;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 28px;
+  font-size: 1.1em;
+  margin-top: 18px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+button[onclick="spinWheel()"]:hover {
+  background: #0E34A0;
+}

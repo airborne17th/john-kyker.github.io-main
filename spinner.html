@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spinner</title>
+    <link rel="stylesheet" href="./assets/spinner/style.css">
+    <link rel="icon" href="./assets/spinner/joey.ico" type="image/x-icon">
+  </head>
+  <body>
+  <h1>🎡 Spin the Wheel</h1>
+  <div id="options">
+    <input type="text" id="optionInput" placeholder="Enter an option">
+    <button onclick="setOption(document.getElementById('optionInput').value)">Add Option</button>
+    <button onclick="clearOptions()">Clear Options</button>
+    <button onclick="displayOptions()">Hide Options</button>
+    <button onclick="editOptions()">Edit Options</button>
+  </div>
+    <div id="optionList">
+      <h2>Options:</h2>
+      <ul id="optionsDisplay"></ul>
+  </div>
+  <div id="wheel">
+    <div class="spinner" id="spinner">
+      <canvas id="spinnerCanvas" width="500" height="500"></canvas>
+      <div class="arrow"></div>
+    </div>
+  </div>
+  <div id="result">Click the button!</div>
+  <button onclick="spinWheel()">Spin</button>
+  <div id="back">
+    <a href="./index.html">Back to Portfolio</a>
+  </div>
+  </body>
+      <script src="./assets/spinner/main.js"></script>
+</html>

@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #D2B48C;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #3E2723;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2E1E1A;
+  }
+  
+  #messageBoard {
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .message-container {
+    border: 3px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 120px;
+    width: 160px;
+  }
+
+  #main-bg{
+    background-image: url(./main-bg.webp);
+  }
+
+  #header-bg{
+    background-image: url(./header-bg.webp);
+    color: white;
+    padding: 20px;
+  }
+
+  #header-bg p {
+    padding-right: 20px; 
+    padding-left: 20px; 
+    margin: 0;
+    background-color: white;
+    color: black;
+  }
+
+  .header-box {
+    background-color: #8B4513; 
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+#messageForm {
+    min-height: 100px;
+  }
+  
+  #loadMoreBtn {
+    min-width: 150px;
+  }
+
+  #messageBoard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.ema-plaque {
+    width: 250px;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* This creates the pentagon/shrine board shape */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0% 100%, 0% 25%);
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.ema-plaque:hover {
+    transform: translateY(-5px) rotate(1deg);
+}
+
+.plaque-content {
+    padding: 40px 20px 20px 20px; /* Extra top padding due to the pointed shape */
+    text-align: center;
+    color: #2c1b0a; /* Dark brown for a "burnt-in" wood look */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.plaque-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 10px 0;
+    color: #3d2b1f;
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.2);
+}
+
+.plaque-user {
+    font-size: 0.9rem;
+    display: block;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 5px;
+}

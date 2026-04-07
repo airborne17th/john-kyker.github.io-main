@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="description" content="Online Application for New Year Wishes">
+      <meta name="keywords" content="HTML, CSS, JavaScript">
+      <meta name="author" content="John Kyker">
+      <title>Ema Board</title>
+      <link rel="stylesheet" href="./assets/ema/style.css">
+      <link rel="icon" href="./assets/ema/favicon.ico" type="image/x-icon">
+   </head>
+   <body>
+      <div id="main-bg">
+         <main>
+            <div id="header-bg">
+               <h1>Welcome to Shrine Board Wishes</h1>
+               <p>Konnichiwa (こんにちは)! Ema (絵馬) are small wooden plaques that are common to Japan. These are used to write prayers or wishes. 
+                  Ema are left hanging up at the shrine, where the kami (神) are believed to receive them. Annually this is done during New Years.
+                  Post your New Years resolution here and view other plaques. If you don't put a name it will be left anonymous.
+               </p>
+            </div>
+            <div id="messageBoard"></div>
+            <button id="loadPrevBtn">View Previous</button>
+            <button id="loadMoreBtn">View More</button>
+            <form id="messageForm">
+               <h3>Make your wish</h3>
+               <label for="user">Name:</label>
+               <input type="text" id="user" name="user">
+               <label for="text">Message:</label>
+               <textarea id="text" name="text" required></textarea>
+               <button type="submit">Submit</button>
+            </form>
+            <a href="./index.html">Back</a>
+         </main>
+      </div>
+      <script type="module" src="./assets/ema/firestore.js"></script>
+      <script type="module" src="./assets/ema/main.js"></script>
+      <script type="module" src="./assets/ema/seed.js"></script>
+   </body>
+</html>

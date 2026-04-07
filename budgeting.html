@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeting App | Take Control</title>
+    <link rel="stylesheet" href="./assets/budgeting/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script type="module" src="./assets/budgeting/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="./assets/budgeting/assets/favicon.ico">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Budgeting App</h1>
+            <div id="appSection" style="display:none;">
+                <span id="userInfo"></span>
+                <button id="logout-button" class="btn-secondary" onclick="handleLogout()">Logout</button>
+            </div>
+            <div id="navSection">
+                <button id="about-button" class="btn-secondary">About</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="authWrapper">
+            <section id="LoginContainer" class="card">
+                <h2>Welcome Back</h2>
+                <p>Track your income and expenses to manage your budget effectively.</p>
+                <div id="authSection" class="form-group">
+                    <input type="text" id="username" placeholder="Username">
+                    <input type="password" id="password" placeholder="Password">
+                    <button id="login-button" class="btn-primary" onclick="handleLogin()">Login</button>
+                </div>
+            </section>
+
+            <section id="RegisterContainer" class="card">
+                <h2>Create Account</h2>
+                <p>Don't have an account?</p>
+                <div class="form-group">
+                    <input type="text" id="signup-username" placeholder="Username">
+                    <input type="password" id="signup-password" placeholder="Password">
+                    <div class="select-group">
+                        <label for="currency">Your Currency:</label>
+                        <select id="currency">
+                            <option value="USD">USD</option>
+                            <option value="CAD">CAD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="JPY">JPY</option>
+                            <option value="CNY">CNY</option>
+                        </select>
+                    </div>
+                    <button id="signup-button" class="btn-secondary" onclick="handleSignup()">Sign Up</button>
+                </div>
+            </section>
+        </div>
+
+        <div id="dashboard" class="grid">
+            <section id="inputSection" class="card">
+                <h2>Transactions</h2>
+                <div class="input-block">
+                    <h3>Add Spending</h3>
+                    <input type="date" id="spending-entry-date">
+                    <input type="number" id="expense-amount" placeholder="Amount">
+                    <button class="btn-primary btn-full" onclick="addExpense()">Add Spending</button>
+                </div>
+
+                <div class="input-block">
+                    <h3>Add Income</h3>
+                    <input type="date" id="income-entry-date">
+                    <input type="number" id="income-amount" placeholder="Amount">
+                    <button class="btn-success btn-full" onclick="addIncome()">Add Income</button>
+                </div>
+            </section>
+
+            <section id="budgetSummary" class="card">
+                <h2>Summary</h2>
+                <div class="summary-stat">
+                    <span>Total Income:</span>
+                    <span id="totalIncome" class="text-success">$0.00</span>
+                </div>
+                <div class="summary-stat">
+                    <span>Total Expenses:</span>
+                    <span id="totalExpenses" class="text-danger">$0.00</span>
+                </div>
+                <hr>
+                <div class="summary-stat net-budget">
+                    <span>Net Budget:</span>
+                    <span id="netBudget">$0.00</span>
+                </div>
+            </section>
+
+            <section class="card full-width">
+                <h2>Visual Insights</h2>
+                <div class="chart-grid">
+                    <div class="chart-box">
+                        <canvas id="expenseChart"></canvas>
+                    </div>
+                    <div class="chart-box">
+                        <canvas id="incomeChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Expense History</h2>
+                <ul id="expenses-list" class="transaction-list"></ul>
+            </section>
+
+            <section class="card">
+                <h2>Income History</h2>
+                <ul id="incomes-list" class="transaction-list"></ul>
+            </section>
+        </div>
+        <button onclick="window.location.href='./index.html'" class="btn-secondary back-button">Back to Index</button>
+    </main>
+
+    <footer>
+        <p>2026 Budgeting App. Stay financially healthy. Created by John Kyker</p>
+    </footer>
+</body>
+</html>

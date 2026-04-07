@@ -1,0 +1,302 @@
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+    -webkit-transition: opacity 0.1s ease-in-out;
+    -moz-transition: opacity 0.1s ease-in-out;
+    -o-transition: opacity 0.1s ease-in-out;
+    -ms-transition: opacity 0.1s ease-in-out;    
+    transition: opacity 0.1s ease-in-out;
+}
+
+#bg {
+  position:fixed; 
+	top:-50%; 
+	left:-50%; 
+	width:200%; 
+	height:200%;
+}
+
+#bg img {
+	position:absolute; 
+	top:0; 
+	left:0; 
+	right:0; 
+	bottom:0; 
+	margin:auto; 
+	min-width:50%;
+	min-height:50%;
+}
+
+#container {
+	font-size: 2.5em;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	text-align: center;
+}
+
+.top-right { 
+	float: right;
+	width: 40%;
+	margin: 20px 5% 0 2.5%;	
+}
+
+.top-left {
+	float: left;
+	width: 40%;
+	margin: 20px 2.5% 0 5%;
+}
+
+.bot-right { 
+	float: right;
+	width: 40%;
+	margin: 20px 5% 0 2.5%;	
+}
+
+.bot-left {
+	float: left;
+	width: 40%;
+	margin: 20px 2.5% 0 5%;
+}
+
+#playerForm {
+	opacity: 0.9;
+	background-color: #EEE;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EEE), color-stop(100%, #CCC));
+	background-image: -webkit-linear-gradient(top, #EEE, #AAA);
+	background-image: -moz-linear-gradient(top, #EEE, #AAA);
+	background-image: -ms-linear-gradient(top, #EEE, #AAA);
+	background-image: -o-linear-gradient(top, #EEE, #AAA);
+	background-image: linear-gradient(top, #EEE, #AAA);
+	border: 1px solid #999;
+	border-bottom: 1px solid #BBB;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	color: #333;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-size: 0.7em;
+	padding: 8px 0;
+	text-align: center;
+	text-shadow: 0 1px 0 #EEE;
+}
+
+.playerLabel {
+	font-size: 0.8em;
+	display: block;
+	margin: 0 0 20px;
+	padding: 5px 0;
+	opacity: 0.9;
+	background-color: #EEE;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EEE), color-stop(100%, #CCC));
+	background-image: -webkit-linear-gradient(top, #EEE, #AAA);
+	background-image: -moz-linear-gradient(top, #EEE, #AAA);
+	background-image: -ms-linear-gradient(top, #EEE, #AAA);
+	background-image: -o-linear-gradient(top, #EEE, #AAA);
+	background-image: linear-gradient(top, #EEE, #AAA);
+	border: 1px solid #999;
+	border-bottom: 1px solid #BBB;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	text-shadow: 0 1px 0 #EEE;
+	background-color: #EEE;
+}
+
+#Player1Life, #Player2Life, #Player3Life, #Player4Life {
+	opacity: 0.9;
+	background-color: #EEE;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EEE), color-stop(100%, #CCC));
+	background-image: -webkit-linear-gradient(top, #EEE, #AAA);
+	background-image: -moz-linear-gradient(top, #EEE, #AAA);
+	background-image: -ms-linear-gradient(top, #EEE, #AAA);
+	background-image: -o-linear-gradient(top, #EEE, #AAA);
+	background-image: linear-gradient(top, #EEE, #AAA);
+	border: 1px solid #999;
+	border-bottom: 1px solid #BBB;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	color: #333;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	padding: 8px 0;
+	text-align: center;
+	text-shadow: 0 1px 0 #EEE;
+}
+
+.playerCount {
+	text-align: center;
+	font-size: 2em;
+}
+
+.upDown {
+  display: block;
+	text-align: center;
+	border-bottom: 1px solid #999;
+	padding: 10px 0;
+	opacity: 0.5;
+}
+
+#reset {
+	display: block;
+	font-size: 3em;
+	line-height: 1.3em;
+	text-align: center;
+	height: 65px;
+	width: 65px;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	color: #1b1a1a;
+	text-shadow: 0 1px 0 #EEE;
+	opacity: 0.7;
+	cursor: pointer;
+  	transition: all 0.3s ease;
+	background-color: #EEE;
+	-webkit-border-top-left-radius: 30px;
+	-moz-border-radius-topleft: 30px;
+	border-top-left-radius: 30px;
+}
+
+#backIndex{
+	display: block;
+	font-size: 3em;
+	line-height: 1.3em;
+	text-align: center;
+	height: 65px;
+	width: 65px;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	color: #1b1a1a;
+	text-shadow: 0 1px 0 #EEE;
+	opacity: 0.7;
+	cursor: pointer;
+  	transition: all 0.3s ease;
+	background-color: #EEE;
+	-webkit-border-top-left-radius: 30px;
+	-moz-border-radius-topleft: 30px;
+	border-top-left-radius: 30px;
+}
+
+#reset:hover {
+	opacity: 1;
+	background-color: #CCC;
+	transform: scale(1.15);
+}
+
+#background {
+	display: block;
+	height: 65px;
+	width: 65px;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	font-size: 3em;
+	line-height: 1.3em;
+	text-align: center;  
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	color: #333;
+	text-shadow: 0 1px 0 #EEE;
+	opacity: 0.7;
+	background-color: #EEE;
+	-webkit-border-top-right-radius: 30px;
+	-moz-border-radius-topright: 30px;
+	border-top-right-radius: 30px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+#background:hover {
+	opacity: 1;
+	background-color: #CCC;
+	transform: scale(1.15);
+}
+
+.playerLeftHalf {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	width: 100%;
+	padding: 1rem;
+  }
+  
+  .playerRightHalf {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	width: 100%;
+	padding: 1rem;
+  }
+
+.playerConcede {
+  align-items: center;
+  background-color: rgba(240, 240, 240, 0.26);
+  border: 1px solid #DFDFDF;
+  border-radius: 8px;
+  color: #000000;
+  cursor: pointer;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  padding: 14px 22px;
+  text-decoration: none;
+  transition: all .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.playerConcede:active,
+.playerConcede:hover {
+  outline: 0;
+}
+
+.playerConcede:hover {
+  background-color: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.19);
+}
+
+@media (min-width: 768px) {
+  .playerConcede {
+    font-size: 20px;
+    min-width: 200px;
+    padding: 14px 16px;
+  }
+}
+
+#subButton {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+#subButton:hover,
+#subButton:focus {
+  opacity: .75;
+}

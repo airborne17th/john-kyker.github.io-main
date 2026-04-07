@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Web game to play backjack">
+  <meta name="author" content="John Kyker">
+  <link rel="icon" href="./assets/backjack/favicon.ico"> 
+<link rel="stylesheet" href="./assets/backjack/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="./assets/backjack/script.js"></script>
+<script src="https://kit.fontawesome.com/80c1c40743.js" crossorigin="anonymous"></script>
+<title>Blackjack</title>
+</head>
+
+<body onload="init();">
+<main>
+  <div class="background">
+  <div class="interface">
+    <h1>Welcome to Blackjack!</h1>
+    <p>
+      Blackjack is a game where players bet against the dealer for hands as close to 21 as possible without going over.
+      Cards from 2-10 are worth their face value. Face cards are worth 10. Aces are worth 11 or 1 depending on which is more advantageous to the hand. 
+      On your turn you can hit or stand. Hit will deal another card. If your hand's value is above 21 you bust and lose the hand. Dealer will hit until the hand is value of 17 or above.
+      <a href="./index.html">Back to Index.</a>
+    </p>
+  </div>
+    <div class="interface">
+      <h3 id="gameUpdate">Hand Status</h3>
+      <div class="gameRow">
+      <div class="gameColumn">
+      <h5>Dealer Hand: <span id="dealerHand"></span></h5>
+      <h5>Dealer Value: <span id="dealerValue"></span></h5>
+      </div>
+      <br />
+      <div class="gameColumn">
+      <h5>Player Hand: <span id="playerHand"></span></h5>
+      <h5>Player Value: <span id="playerValue"></span></h5>
+      <h5>Player Score: <span id="playerScore"></span></h5>
+      </div>
+      </div>
+      <button id="HitBtn" onclick="hit()">Hit</button>
+      <button id="StandBtn" onclick="stand()">Stand</button>
+      <button id="DoubleBtn" onclick="doubledown()">Double Down!</button>
+      <br /><br />
+      <button id="NewHandBtn" onclick="newDeal()">New Hand</button>
+      <button id="ResetBtn" onclick="reset()">Reset Game</button>
+    </div>
+  </div>
+</main>
+</body>
+</html>

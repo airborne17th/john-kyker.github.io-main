@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="description" content="Tracking Life of Magic">
+      <meta name="keywords" content="HTML, CSS, JavaScript">
+      <meta name="author" content="John Kyker">
+      <title>MTG Life Tracker</title>
+      <link rel="stylesheet" href="./assets/mtgLife/style.css">
+      <link rel="icon" href="./assets/mtgLife/favicon.ico" type="image/x-icon">
+   </head>
+   <body>
+      <div>
+         <img id="bg" src="./assets/mtgLife/bg/wings.jpg" alt="Magic Background">
+      </div>
+      <main>
+         <div id="container">
+            <div id="playerForm">
+               <form>
+                  <p>Fill out information then hit submit to start. Reset is on the right and return to index is on the left.</p>
+                  <p>Please Select Format:
+                     <input type="radio" id="standard" name="mode" value="0">
+                     <label for="mode1">Standard</label>
+                     <input type="radio" id="commander" name="mode" value="1" checked="checked">
+                     <label for="mode2">Commander</label>
+                  </p>
+                  <p>  
+                    <label for="pCount">Select Player Count:</label>
+                    <select name="pCount" id="pCount" onchange="selectPlayerCount()">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </p>
+                  <p>
+                     <label for="p1name">Player 1 Name:</label>
+                     <input type="text" id="p1name" name="p1name" value="Player 1">
+                     <label for="p2name">Player 2 Name:</label>
+                     <input type="text" id="p2name" name="p2name" value="Player 2"><br>
+                     <label for="p3name">Player 3 Name:</label>
+                     <input type="text" id="p3name" name="p3name" value="Player 3">
+                     <label for="p4name">Player 4 Name:</label>
+                     <input type="text" id="p4name" name="p4name" value="Player 4"><br>
+                     <input type="button" value="Submit" class="playerConcede" onclick="initializeSetup()">
+                  </p>
+               </form>
+            </div>
+         </div>
+         <div id="container">
+            <div class="top-left">
+               <div id="Player1Life">
+                  <div class="playerLeftHalf">
+                     <label id="Player1Name"></label>
+                     <div class="upDown" id="Player1LifeUp">▲</div>
+                     <div class="playerCount" id="Player1LifeCount"></div>
+                     <div class="upDown" id="Player1LifeDown">▼</div>
+                     <div>
+                        <button class="playerConcede" id="Player1Concede">Concede</button>
+                     </div>
+                  </div>
+                  <div class="playerRightHalf">
+                     <img src="./assets/mtgLife/poison.png" alt="Poison Counter" height="128" width="72">
+                     <div class="upDown" id="Player1InfectUp">▲</div>
+                     <div class="playerCount" id="Player1InfectCount"></div>
+                     <div class="upDown" id="Player1InfectDown">▼</div>
+                  </div>
+               </div>
+            </div>
+            <div class="top-right">
+               <div id="Player2Life">
+                  <div class="playerLeftHalf">
+                     <label id="Player2Name"></label>
+                     <div class="upDown" id="Player2LifeUp">▲</div>
+                     <div class="playerCount" id="Player2LifeCount"></div>
+                     <div class="upDown" id="Player2LifeDown">▼</div>
+                     <div>
+                        <button class="playerConcede" id="Player2Concede">Concede</button>
+                     </div>
+                  </div>
+                  <div class="playerRightHalf">
+                     <img src="./assets/mtgLife/poison.png" alt="Poison Counter" height="128" width="72">
+                     <div class="upDown" id="Player2InfectUp">▲</div>
+                     <div class="playerCount" id="Player2InfectCount"></div>
+                     <div class="upDown" id="Player2InfectDown">▼</div>
+                  </div>
+               </div>
+            </div>
+            <div class="bot-left">
+               <div id="Player3Life">
+                  <div class="playerLeftHalf">
+                     <label id="Player3Name"></label>
+                     <div class="upDown" id="Player3LifeUp">▲</div>
+                     <div class="playerCount" id="Player3LifeCount"></div>
+                     <div class="upDown" id="Player3LifeDown">▼</div>
+                     <div>
+                        <button class="playerConcede" id="Player3Concede">Concede</button>
+                     </div>
+                  </div>
+                  <div class="playerRightHalf">
+                     <img src="./assets/mtgLife/poison.png" alt="Poison Counter" height="128" width="72">
+                     <div class="upDown" id="Player3InfectUp">▲</div>
+                     <div class="playerCount" id="Player3InfectCount"></div>
+                     <div class="upDown" id="Player3InfectDown">▼</div>
+                  </div>
+               </div>
+            </div>
+            <div class="bot-right">
+               <div id="Player4Life">
+                  <div class="playerLeftHalf">
+                     <label id="Player4Name"></label>
+                     <div class="upDown" id="Player4LifeUp">▲</div>
+                     <div class="playerCount" id="Player4LifeCount"></div>
+                     <div class="upDown" id="Player4LifeDown">▼</div>
+                     <div>
+                        <button class="playerConcede" id="Player4Concede">Concede</button>
+                     </div>
+                  </div>
+                  <div class="playerRightHalf">
+                     <img src="./assets/mtgLife/poison.png" alt="Poison Counter" height="128" width="72">
+                     <div class="upDown" id="Player4InfectUp">▲</div>
+                     <div class="playerCount" id="Player4InfectCount"></div>
+                     <div class="upDown" id="Player4InfectDown">▼</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="reset">↺</div>
+         <div id="backIndex"><a href="index.html">←</a></div>
+      </main>
+   </body>
+   <script type="text/javascript" src="./assets/mtgLife/counter.js"></script>
+</html>

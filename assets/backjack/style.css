@@ -1,0 +1,62 @@
+
+main {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('./background.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.interface {
+  max-width: 800px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(141, 201, 106, 0.95);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.gameRow{
+    display: flex;
+}
+
+.gameColumn {
+    flex: 50%;
+}
+
+#HitBtn{
+    background-color: lightseagreen;
+    font-weight: bold;
+}
+
+#StandBtn{
+    background-color: lightcoral;
+    font-weight: bold;
+}
+
+#NewHandBtn{
+    background-color: lightseagreen;
+    font-weight: bold;
+}
+
+#ResetBtn{
+    background-color: lightcoral;
+    font-weight: bold;
+}
+
+#DoubleBtn{
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+
